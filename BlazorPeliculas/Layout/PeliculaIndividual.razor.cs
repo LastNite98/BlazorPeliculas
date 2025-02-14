@@ -2,10 +2,10 @@
 using BlazorPeliculas.Entidades;
 
 namespace BlazorPeliculas.Layout {
-    public partial class ListadoPeliculas {
+    public partial class PeliculaIndividual {
 
         [Parameter]
         [EditorRequired]
-        public List<Pelicula>? Peliculas { get; set; }
+        public Pelicula? Pelicula { get; set; }
     }
 }

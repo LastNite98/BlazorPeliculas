@@ -11,23 +11,6 @@ else
 {
     @foreach (var pelicula in Peliculas)
     {
-        <div>
-            <p>Titulo: <b>@pelicula.Titulo</b></p>
-            @if (DateTime.Today.Subtract(pelicula.FechaLanzamiento).Days <= 14)
-            {
-                <span style="color:red">(¡Nuevo!)</span>
-            }
-            <p>Fecha lanzamiento:<b>@pelicula.FechaLanzamiento.ToString("dd MM yyyy")</b></p>
-        </div>
+        <PeliculaIndividual Pelicula="pelicula" />
     }
 }
-
-@*     <h4>Ejemplo for</h4>
-    @for (int i = 0; i < Peliculas.Count; i++)
-    {
-        <div>
-            <p>@(i + 1) Titulo: <b>@Peliculas[i].Titulo</b></p>
-            <p>Fecha lanzamiento:<b>@Peliculas[i].FechaLanzamiento.ToString("dd MM yyyy")</b></p>
-        </div>
-    }
- *@
