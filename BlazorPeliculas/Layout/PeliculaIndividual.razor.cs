@@ -10,7 +10,7 @@ namespace BlazorPeliculas.Layout {
         [Parameter]
         public bool MostrarBotones { get; set; }
         [Parameter]
-        public EventCallback EliminarPelicula { get; set; }
+        public EventCallback <Pelicula> EliminarPelicula { get; set; }
 
     }
 }

@@ -9,8 +9,9 @@ namespace BlazorPeliculas.Layout {
         public List<Pelicula>? Peliculas { get; set; }
         public bool MostrarBotones { get; set; }
 
-        private void EliminarPelicula() {
+        private void EliminarPelicula(Pelicula pelicula) {
             Console.WriteLine("Eliminando una pelicula");
+            Peliculas!.Remove(pelicula);
         }
     }
 }
