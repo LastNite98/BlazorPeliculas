@@ -9,8 +9,11 @@ else if (Peliculas.Count == 0)
 }
 else
 {
+    <input type="checkbox" @bind="MostrarBotones" />
+    <span>Mostrar botones</span>
+
     @foreach (var pelicula in Peliculas)
     {
-        <PeliculaIndividual Pelicula="pelicula" />
+        <PeliculaIndividual Pelicula="pelicula"  EliminarPelicula="EliminarPelicula" MostrarBotones="MostrarBotones" />
     }
 }

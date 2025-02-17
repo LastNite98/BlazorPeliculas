@@ -1,0 +1,11 @@
+﻿<input type="text" @bind="busqueda" @bind:after="Buscar"/>
+<p>
+    Personas encontradas
+</p>
+
+<ul>
+    @foreach(var persona in personasEncontradas)
+    {
+        <li>@persona</li>
+    }
+</ul>

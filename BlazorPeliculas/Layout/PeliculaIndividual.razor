@@ -6,4 +6,10 @@
         <span style="color:red">(¡Nuevo!)</span>
     }
     <p>Fecha lanzamiento:<b>@Pelicula.FechaLanzamiento.ToString("dd MM yyyy")</b></p>
+    @if (MostrarBotones)
+    {
+        <div>
+            <button @onclick="EliminarPelicula">Borrar</button>
+        </div>
+    }
 </div>
