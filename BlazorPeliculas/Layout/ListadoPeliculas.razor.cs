@@ -7,6 +7,7 @@ namespace BlazorPeliculas.Layout {
         [Parameter]
         [EditorRequired]
         public List<Pelicula>? Peliculas { get; set; }
+
         public bool MostrarBotones { get; set; }
 
         private void EliminarPelicula(Pelicula pelicula) {

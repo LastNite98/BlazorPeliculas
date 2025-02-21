@@ -1,0 +1,32 @@
+﻿@typeparam Titem
+
+@if (Listado is null)
+{
+    if (Cargando is null)
+    {
+        <img alt="Cargando"
+             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.tenor.com%2F0iK9a1WkT40AAAAM%2Floading-white.gif&f=1&nofb=1&ipt=b137ae5f0f0bfe90db0026fe93d5b5c24cb04cbf6a1969afa2d783407885cebe&ipo=images">
+    }
+    else
+    {
+        @Cargando
+    }
+}
+else if (Listado.Count == 0)
+{
+    if (NoHayRegistros is null)
+    {
+        <p>No hay peliculas para mostrar</p>
+    }
+    else
+    {
+        @NoHayRegistros
+    }
+}
+else
+{
+    @foreach (var elemento in Listado)
+    {
+        @HayRegistros(elemento)
+    }
+}
